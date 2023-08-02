@@ -14,6 +14,8 @@ class NatigaConroller extends Controller
     public function natigaThanway(Request $request)
     {
 
+        return $request;
+
 
             $request->validate([
                 'code' => "required|integer",
@@ -82,5 +84,11 @@ class NatigaConroller extends Controller
             }
 
             return redirect()->route('home');
+    }
+
+    public function test (Request $request) {
+        
+        return "test";
+        return $request; 
     }
 }

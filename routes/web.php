@@ -23,6 +23,11 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::post('/natiga-thanway', [NatigaConroller::class, 'natigaThanway'])->name('natiga.thanway');
+Route::get('/natiga-thanway-test', [NatigaConroller::class, 'test'])->name('natiga.test');
+
+Route::get('/testing', function () {
+    return "test";
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard.dashboard');
